@@ -1,19 +1,11 @@
 # Task Manager CLI Project
 
-## Learning Goals
-
-- Discuss the basic directory structure of a CLI.
-- Outline the first steps in building a CLI.
-
----
-
-## Introduction
+<!-- ## Introduction -->
 
 ## Technologies
 
 - Python and MySQL
-
-## Generating Your CLI
+<!--
 
 ## Conclusion
 
@@ -23,4 +15,4 @@ to a good start with your Phase 3 Project.
 
 Happy coding!
 
----
+--- -->
