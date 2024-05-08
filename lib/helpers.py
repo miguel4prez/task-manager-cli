@@ -22,7 +22,8 @@ def log_in():
     user = User.find_by_username(username)
 
     if user:
-        if password == user.password:
+        hashed_password = User._hash_password(password)
+        if hashed_password == user.password:
             print(f'\033[32mWelcome {user.username}!\033[0m')
             return user
         else:
