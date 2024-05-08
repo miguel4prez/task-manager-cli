@@ -8,7 +8,7 @@ This is a command-line interface (CLI) application for managing tasks. It allows
 
 ## Technologies
 
-Python, MySQL, Hashlib
+Python, SQLite, Hashlib
 
 ### Usage
 
