@@ -12,12 +12,14 @@ CREATE TABLE IF NOT EXISTS users (
 """
 
 create_tasks_table_sql = """
-CREATE TABLE IF NOT EXISTS tasks (
-    id INTEGER PRIMARY KEY,
-    task_name TEXT,
-    priority TEXT
-);
-"""
+    CREATE TABLE IF NOT EXISTS tasks (
+        id INTEGER PRIMARY KEY,
+        task_name TEXT,
+        priority TEXT,
+        user_id INTEGER,
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    );
+    """
 
 # Execute the SQL command to create the table
 CURSOR.execute(create_users_table_sql)

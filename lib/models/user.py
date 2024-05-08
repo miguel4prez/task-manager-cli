@@ -1,4 +1,5 @@
 from models.__init__ import CURSOR, CONN
+import hashlib
 
 class User:
 
@@ -57,16 +58,25 @@ class User:
     CONN.commit()
 
   def save(self):
+    hashed_password = self._hash_password(self.password)
+
     sql = """
       INSERT INTO users (username, password)
       VALUES (?, ?)
     """
 
-    CURSOR.execute(sql, (self.username, self.password))
+    CURSOR.execute(sql, (self.username, hashed_password))
     CONN.commit()
 
     self.id = CURSOR.lastrowid
     type(self).all[self.id] = self
+
+  @staticmethod
+  def _hash_password(password):
+      """ Hash the password using SHA-256 """
+      hashed_bytes = hashlib.sha256(password.encode('utf-8'))
+      return hashed_bytes.hexdigest()
+
 
   @classmethod
   def create(cls, username, password):
