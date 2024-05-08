@@ -1,7 +1,3 @@
-Certainly! Here's an updated README with code snippets highlighting some features:
-
----
-
 # Task Manager CLI
 
 This is a command-line interface (CLI) application for managing tasks. It allows users to create an account, log in, view tasks, create new tasks, update tasks, and mark tasks as completed.

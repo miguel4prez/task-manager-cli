@@ -1,5 +1,6 @@
 from models.user import User
 from models.task import Task
+import getpass
 
 def exit_program():
     print("\033[32mGoodbye!\033[0m")
@@ -7,7 +8,7 @@ def exit_program():
 
 def sign_up():
     username = input('\033[35mCreate Your Username:\033[0m ')
-    password = input('\033[35mCreate Your Password:\033[0m ')
+    password = getpass.getpass('\033[35mCreate Your Password:\033[0m ')
 
     try:
         user = User.create(username, password)
@@ -17,7 +18,7 @@ def sign_up():
     
 def log_in():
     username = input('\033[35mEnter Your Username:\033[0m ')
-    password = input('\033[35mEnter Your Password:\033[0m ')
+    password = getpass.getpass('\033[35mEnter Your Password:\033[0m ')
 
     user = User.find_by_username(username)
 
