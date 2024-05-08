@@ -82,18 +82,21 @@ This will start the application, and you will be prompted with options to create
 
 ## Highlights
 
-- **Object-Oriented Programming (OOP)**:
+# Object-Oriented Programming (OOP):
+
 - Implemented classes such as User and Task to represent entities in the - application.
 - Utilized encapsulation to define properties and behaviors of objects, ensuring data integrity and code maintainability.
 - Employed inheritance and polymorphism to create class hierarchies and promote code reusability.
 - Leveraged class methods and static methods to encapsulate business logic and utility functions.
 
-- **Database Interaction**:
+# Database Interaction:
+
 - Integrated SQLite database to persist user accounts and task data.
 - Utilized SQL queries and database transactions to perform CRUD (Create, Read, Update, Delete) operations on user and task entities.
 - Implemented database migrations to manage changes in the database schema over time, ensuring data consistency and application stability
 
-- **Security and Data Protection**:
+# Security and Data Protection:
+
 - Implemented secure password hashing using the SHA-256 cryptographic hash function to protect user passwords.
 - Enforced password complexity requirements and input validation to mitigate common security risks such as brute-force attacks and SQL injection.
 - Leveraged secure database connections and parameterized queries to prevent SQL injection vulnerabilities and safeguard sensitive user data.
